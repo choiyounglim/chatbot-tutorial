@@ -39,7 +39,7 @@ let getConversationResponse = (message, context) => {
       if (err) {
         rejected(err);
       }
-      else{
+      /*else{
         let processed = postProcess(data);
         if(processed){
           // return 값이 Promise 일 경우
@@ -59,7 +59,8 @@ let getConversationResponse = (message, context) => {
           // return 값이 없을 경우
           resolved(data);
         }
-      }
+      }*/
+     resolved(postProcess(data));
     });
   })
 }
